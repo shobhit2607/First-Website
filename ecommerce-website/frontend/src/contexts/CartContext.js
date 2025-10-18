@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
   const loadCartItems = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5000/api/cart');
+      const response = await axios.get('http://localhost:8000/api/cart');
       setCartItems(response.data);
     } catch (error) {
       console.error('Failed to load cart items:', error);
@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/cart', {
+      await axios.post('http://localhost:8000/api/cart', {
         product_id: productId,
         quantity
       });
@@ -62,7 +62,7 @@ export const CartProvider = ({ children }) => {
 
   const updateCartItem = async (itemId, quantity) => {
     try {
-      await axios.put(`http://localhost:5000/api/cart/${itemId}`, {
+      await axios.put(`http://localhost:8000/api/cart/${itemId}`, {
         quantity
       });
       
@@ -79,7 +79,7 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = async (itemId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/cart/${itemId}`);
+      await axios.delete(`http://localhost:8000/api/cart/${itemId}`);
       
       // Reload cart items
       await loadCartItems();

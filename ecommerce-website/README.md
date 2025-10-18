@@ -43,16 +43,26 @@ Navigate to the backend directory and install dependencies:
 
 ```bash
 cd backend
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Run the Flask application:
 
 ```bash
-python app.py
+python3 app.py
 ```
 
-The backend will be available at `http://localhost:5000`
+The backend will be available at `http://localhost:8000`
+
+### Quick Start (Alternative)
+
+You can also use the provided startup script to run both backend and frontend:
+
+```bash
+./start.sh
+```
+
+This will start both the backend (port 8000) and frontend (port 3000) automatically.
 
 ### 3. Frontend Setup
 
@@ -70,6 +80,12 @@ npm start
 ```
 
 The frontend will be available at `http://localhost:3000`
+
+**Note**: If port 3000 is already in use, you can start the frontend on a different port:
+
+```bash
+PORT=3001 npm start
+```
 
 ## Usage
 

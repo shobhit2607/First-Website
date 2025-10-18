@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     const checkAuth = async () => {
       if (token) {
         try {
-          const response = await axios.get('http://localhost:5000/api/auth/profile');
+          const response = await axios.get('http://localhost:8000/api/auth/profile');
           setUser(response.data);
         } catch (error) {
           console.error('Auth check failed:', error);
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('http://localhost:8000/api/auth/login', {
         username,
         password
       });
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (username, email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post('http://localhost:8000/api/auth/register', {
         username,
         email,
         password
