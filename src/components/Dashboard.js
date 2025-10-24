@@ -30,7 +30,7 @@ const Dashboard = () => {
   const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
 
   const chartData = recommendations.map((rec, index) => ({
-    name: rec.name || Object.keys(career_data).find(key => career_data[key] === rec) || `Career ${index + 1}`,
+    name: rec.name || `Career ${index + 1}`,
     match: rec.match_percentage || 0,
     salary: rec.salary_range ? (rec.salary_range[0] + rec.salary_range[1]) / 2 : 0,
     growth: rec.growth_rate || 0
