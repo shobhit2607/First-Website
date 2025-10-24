@@ -10,6 +10,9 @@ import Profile from './components/Profile';
 import ChatBot from './components/ChatBot';
 import AdminDashboard from './components/AdminDashboard';
 import CourseIntegration from './components/CourseIntegration';
+import CareerExplorer from './components/CareerExplorer';
+import SkillDevelopment from './components/SkillDevelopment';
+import JobSearch from './components/JobSearch';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import './App.css';
 
@@ -56,6 +59,18 @@ function AppContent() {
           <Route 
             path="/courses" 
             element={user ? <CourseIntegration /> : <Navigate to="/login" />} 
+          />
+          <Route 
+            path="/careers" 
+            element={user ? <CareerExplorer /> : <Navigate to="/login" />} 
+          />
+          <Route 
+            path="/skills" 
+            element={user ? <SkillDevelopment /> : <Navigate to="/login" />} 
+          />
+          <Route 
+            path="/jobs" 
+            element={user ? <JobSearch /> : <Navigate to="/login" />} 
           />
           <Route 
             path="/admin" 

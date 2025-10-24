@@ -11,7 +11,10 @@ import {
   MessageCircle, 
   UserCircle,
   BookOpen,
-  Settings
+  Settings,
+  Target,
+  Briefcase,
+  Search
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -27,8 +30,11 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Dashboard', icon: Home },
     { path: '/quiz', label: 'Career Quiz', icon: Brain },
-    { path: '/chat', label: 'AI Chat', icon: MessageCircle },
+    { path: '/careers', label: 'Explore Careers', icon: Search },
+    { path: '/skills', label: 'Skill Development', icon: Target },
+    { path: '/jobs', label: 'Jobs & Internships', icon: Briefcase },
     { path: '/courses', label: 'Courses', icon: BookOpen },
+    { path: '/chat', label: 'AI Chat', icon: MessageCircle },
     { path: '/profile', label: 'Profile', icon: UserCircle },
     { path: '/admin', label: 'Admin', icon: Settings },
   ];
